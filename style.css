@@ -1,0 +1,12 @@
+/*
+  font-family: "Montserrat", sans-serif;
+*/
+
+/*reset*/
+body{
+  margin: unset;
+}
+.section{
+  box-shadow: inset 0 0 10px red;
+
+}
