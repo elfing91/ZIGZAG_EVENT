@@ -157,7 +157,8 @@ flex-shrink: 0;
      position: relative;/*absolute된 요소의 컨테이닝 블럭*/
 
      z-index: 0;/*z-index:auto가 아닌 값을 넣어 .panel-cover-bg가 새로운 스택킹 컨텍스트가 되게 함*/
-}
+
+ }
 
 /*상위요소중에  position: relative;기준*/
 .panel-cover-bg{
@@ -172,6 +173,18 @@ flex-shrink: 0;
   z-index: -1; /*스태킹 컨텍스트에서 가장 맨 밑에 배치*/
 
   object-fit: cover;/*이미지의 비율 유지*/
+}
+
+.panel-cover-descript{
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-white);
+  font-size: 3.2rem; /*32px*/
+  background-color: rgb(98 48 162/ .5);/*✨*/
 }
 
 .panel-content{
