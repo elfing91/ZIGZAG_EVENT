@@ -1,7 +1,11 @@
-/*
+:root{
   font-family: "Montserrat", sans-serif;
-*/
-
+  --color-white:#fff;
+  font-size: 62.5%; /*브라우저 기본 폰트 사이즈 설정인 16px의 62.5%=10px*/
+}
+body{
+  font-size: 1.4rem;
+}
 /*reset*/
 body,p{
   margin: unset;
@@ -46,6 +50,8 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
+/*.section-header에 flexbox 제거, 그 어떤 콘텐츠도 담을 수 있는 확장성 위해, 그리고 하위에 section과 전혀 관계없는 별도 소속의 title을 만들어 냄. title로 새로운 컴포넌트가 시작되니, 클래스 구성이 좀 더 직관적이 됨.
+*/
 .title{
   /*title하위 가로배치*/
   display: flex;
@@ -57,7 +63,19 @@ h1,h2,h3,h4,h5,h6{
   flex-basis: auto;/*내부 타이틀 텍스트만큼 너비가 조정되게*/
   box-shadow: inset 0 0 10px darkcyan;
 
+  flex-basis: auto;
+  min-width: 280px;/*최소 사이즈 규정:280px보다 더 작이지지 않게 한계 설정*/
+  
+  line-height: 1.1;
+
+
+  /*css변수 이용가능*/
+  color: var(--color-white);
+  font-size: 4rem;/*10px의 4배=40px*/
+  /*color는 css변수로 이용가능/ font-size는 :root기준으로 설정가능*/
+
 }
+
 
 .title-descript{
   box-shadow: inset 0 0 10px orangered;
