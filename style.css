@@ -3,6 +3,11 @@
   --color-white:#fff;
   font-size: 62.5%; /*브라우저 기본 폰트 사이즈 설정인 16px의 62.5%=10px*/
 }
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
 body{
   font-size: 1.4rem;
 }
@@ -26,7 +31,7 @@ h1,h2,h3,h4,h5,h6{
 .l_wrapper{
   max-width: 1080px;
   margin: 0 auto;
-
+  padding: 0 30px;
 
 }
 
@@ -176,8 +181,9 @@ flex-shrink: 0;
 }
 
 .panel-cover-descript{
-  height: 100%;
+  height: 100%;/*부모의 높이 받아옴*/
 
+  /*하위 텍스트 가로세로 중앙정렬*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,7 +200,11 @@ flex-shrink: 0;
   /*내부 컨텐츠 너비와 상관없이 너비 조정*/
 
    /* flex-basis: 0이므로 flex-grow비율 만으로도 너비 조정*/
-  flex-basis: 0;/*✨패널 커버를 압박하지 않고 내부컨텐츠 상관없이 flex-grow:1만큼 차지함*/
+  /*flex-basis: 0;/*✨패널 커버를 압박하지 않고 내부컨텐츠 상관없이 flex-grow:1만큼 차지함*/
+  
+  flex-basis: 500px;
+  /*내부 컨텐츠 너비와 관계없이 너비 조정=>auto*/
+  /*auto값을 500px이라는 임의 설정값으로 바꿔 창 크기가 작아졌을 때 panel-cover의 너비를 수축시킬 수 있음*/
   
   min-width: 0; /*✨내부 컨텐츠가 빠져나갈 경우(어처구니 이미지) 컨텐트가 패널 커버를 압박해 크기가 늘어나지 않게 함*/
 /*✨min-width:auto는 내부 컨텐츠 크기로 min-width가 강제됨=>이를 방지하기 위해 0으로 설정*/
