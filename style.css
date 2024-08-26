@@ -32,6 +32,8 @@ h1,h2,h3,h4,h5,h6{
 .l_gap_row{
   display: grid;
   row-gap: 30px;
+  /*.l_gap_row의 안전성 높임*/
+  grid-template-columns: minmax(0,1fr);/*✨min-widtn:auto문제를 컨테이너 관점에서 미리 해결*/
 }
 
 /*component*/
@@ -113,4 +115,17 @@ h1,h2,h3,h4,h5,h6{
 
 .panel{
   background-color: var(--color-white);
+  display: flex;
 }
+
+.panel-cover{
+  width: 280px;
+  box-shadow: inset 0 0 20px red;
+
+}
+.panel-content{
+  flex-grow: 1;
+
+  box-shadow: inset 0 0 20px red;
+}
+
