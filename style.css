@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5,h6{
 .l_wrapper{
   max-width: 1080px;
   margin: 0 auto;
+  
 
 }
 
@@ -34,6 +35,32 @@ h1,h2,h3,h4,h5,h6{
   row-gap: 30px;
   /*.l_gap_row의 안전성 높임*/
   grid-template-columns: minmax(0,1fr);/*✨min-widtn:auto문제를 컨테이너 관점에서 미리 해결*/
+}
+
+.list{
+}
+.list li + li{
+  margin-top: 12px;
+}
+
+.list li{
+  /*::before로 만들어진 점과 내부 컨텐츠를 가로로 정렬*/
+  display: flex;
+  align-items: center;
+}
+
+.list li::before{
+  content: " ";
+  background-color: #C89DFF;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 14px;
+  margin-left: -24px;
+
+/* 점이 절대 작아지지 않게 함 */
+flex-shrink: 0;
 }
 
 /*component*/
@@ -70,7 +97,7 @@ h1,h2,h3,h4,h5,h6{
 .title-heading{
   flex-basis: auto;/*내부 타이틀 텍스트만큼 너비가 조정되게*/
 
-  flex-basis: auto;
+  
   min-width: 280px;/*최소 사이즈 규정:280px보다 더 작이지지 않게 한계 설정*/
   
   line-height: 1.1;
@@ -116,6 +143,8 @@ h1,h2,h3,h4,h5,h6{
 .panel{
   background-color: var(--color-white);
   display: flex;/*가로배치*/
+  color: #111;
+
 }
 
 .panel-cover{
@@ -143,7 +172,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-.panel{
+.panel-title {
   color: #6230A2;
   font-size: 1.8rem;
   font-weight: 700;
