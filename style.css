@@ -7,8 +7,12 @@ body{
   font-size: 1.4rem;
 }
 /*reset*/
-body,p{
+body,p, ul{
   margin: unset;
+}
+
+li{
+  list-style-type: none;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -22,8 +26,12 @@ h1,h2,h3,h4,h5,h6{
 .l_wrapper{
   max-width: 1080px;
   margin: 0 auto;
-  box-shadow: inset 0 0 10px blue;
 
+}
+
+.l_gap_row{
+  display: grid;
+  row-gap: 30px;
 }
 
 /*component*/
@@ -42,11 +50,9 @@ h1,h2,h3,h4,h5,h6{
   color:#F98173;
 }
 .section-header{
-  box-shadow: inset 0 0 10px purple;
   margin-bottom: 100px;
 }
 .section-contents{
-  box-shadow: inset 0 0 10px purple;
 
 }
 
@@ -55,14 +61,12 @@ h1,h2,h3,h4,h5,h6{
 .title{
   /*title하위 가로배치*/
   display: flex;
-  box-shadow: inset 0 0 10px gold;
   align-items: center;
 
 }
 
 .title-heading{
   flex-basis: auto;/*내부 타이틀 텍스트만큼 너비가 조정되게*/
-  box-shadow: inset 0 0 10px darkcyan;
 
   flex-basis: auto;
   min-width: 280px;/*최소 사이즈 규정:280px보다 더 작이지지 않게 한계 설정*/
@@ -79,7 +83,6 @@ h1,h2,h3,h4,h5,h6{
 
 
 .title-descript{
-  box-shadow: inset 0 0 10px orangered;
 
   /**/
   flex-grow: 1;
@@ -94,7 +97,6 @@ h1,h2,h3,h4,h5,h6{
 /*가상요소는 하위요소로 생성되며 flex-item이 될 수 있다*/
 .title-descript::before{
   content: ' ';
-  background-color: gold;
 
   flex-shrink: 0;
   /*✨초기값 1, 그러므로 오른쪽 텍스트에 의해 수축될 수 있다
@@ -105,7 +107,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .title-controls{
-  box-shadow: inset 0 0 10px dodgerblue;
   margin-left: auto;
 
+}
+
+.panel{
+  background-color: var(--color-white);
 }
