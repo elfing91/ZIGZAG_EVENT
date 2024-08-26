@@ -152,6 +152,10 @@ flex-shrink: 0;
 
 }
 
+.panel:nth-child(even){
+  flex-direction: row-reverse;/*✨2번 panel의 flex-direcrion 조정해 배치 위치 바꿈*/
+}
+
 .panel-cover{
   /*고정너비*/
   width: 280px;
@@ -220,3 +224,26 @@ flex-shrink: 0;
   margin-bottom: 14px;
 }
 
+@media(max-width:768px){
+  .title{
+    display: block;
+    text-align: center;
+  }
+
+  .title-descript{
+    display: block;
+
+    max-width: 320px;
+    margin: 40px auto;
+  }
+
+  .panel{
+    display: block;
+
+  }
+  .panel-cover{
+    width: unset;/**/
+    aspect-ratio: 12/8;/**/
+  }
+
+}
