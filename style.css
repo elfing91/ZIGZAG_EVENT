@@ -3,10 +3,73 @@
 */
 
 /*reset*/
-body{
+body,p{
   margin: unset;
 }
+
+h1,h2,h3,h4,h5,h6{
+  font-size: unset;
+  font-weight: unset;
+  margin: unset;
+}
+
+/*레이아웃*/
+/*공통으로 활용하는 레이아웃 클래스, 가로기준으로 중앙정렬만 담당*/
+.l_wrapper{
+  max-width: 1080px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px blue;
+
+}
+
+/*component*/
+/*시각적으로 보여지는 공통 분모->템플릿 구성*/
 .section{
-  box-shadow: inset 0 0 10px red;
+  padding: 92px 0 100px;
+}
+
+.section.purple{
+  background-color: #6230A2;
+  color:#C89DFF;
+}
+
+.section.white{
+  background-color: #FFF5ED;
+  color:#F98173;
+}
+.section-header{
+  box-shadow: inset 0 0 10px purple;
+  margin-bottom: 100px;
+}
+.section-contents{
+  box-shadow: inset 0 0 10px purple;
+
+}
+
+.title{
+  /*title하위 가로배치*/
+  display: flex;
+  box-shadow: inset 0 0 10px gold;
+
+}
+
+.title-heading{
+  flex-basis: auto;/*내부 타이틀 텍스트만큼 너비가 조정되게*/
+  box-shadow: inset 0 0 10px darkcyan;
+
+}
+
+.title-descript{
+  box-shadow: inset 0 0 10px orangered;
+
+  /**/
+  flex-grow: 1;
+  max-width: 582px;
+
+}
+
+.title-controls{
+  box-shadow: inset 0 0 10px dodgerblue;
+  margin-left: auto;
 
 }
