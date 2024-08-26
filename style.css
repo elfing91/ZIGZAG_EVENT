@@ -56,6 +56,7 @@ h1,h2,h3,h4,h5,h6{
   /*title하위 가로배치*/
   display: flex;
   box-shadow: inset 0 0 10px gold;
+  align-items: center;
 
 }
 
@@ -84,6 +85,23 @@ h1,h2,h3,h4,h5,h6{
   flex-grow: 1;
   max-width: 582px;
 
+  
+  display: flex;/*가상요소(하위요소)를 flex-item으로 만듦*/
+  gap: 32px;
+  align-items: center;
+}
+
+/*가상요소는 하위요소로 생성되며 flex-item이 될 수 있다*/
+.title-descript::before{
+  content: ' ';
+  background-color: gold;
+
+  flex-shrink: 0;
+  /*✨초기값 1, 그러므로 오른쪽 텍스트에 의해 수축될 수 있다
+  ->이를 방지하기 위해 0으로 지정해 언제나 90px이 보장되게 함*/
+  width: 90px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .title-controls{
